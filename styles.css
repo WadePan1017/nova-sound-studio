@@ -23,15 +23,20 @@ html {
 
 body {
     font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-    background-color: transparent;
+    background-color: var(--dark);
     color: var(--text);
     overflow-x: hidden;
     line-height: 1.6;
+}
+
+.bg-image {
+    position: fixed;
+    inset: 0;
     background-image: url('background.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
     background-repeat: no-repeat;
+    z-index: -2;
 }
 
 body::before {
@@ -694,20 +699,12 @@ footer {
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
-    body {
-        background-image: none;
-        background: linear-gradient(135deg, #0f0f14 0%, #1a1a2e 50%, #0f0f14 100%);
+    .bg-image {
+        background-position: center 30%;
     }
 
     body::before {
-        content: '';
-        position: fixed;
-        inset: 0;
-        background:
-            radial-gradient(ellipse at 20% 20%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
-            radial-gradient(ellipse at 80% 80%, rgba(34, 211, 238, 0.1) 0%, transparent 50%);
-        pointer-events: none;
-        z-index: -1;
+        background: linear-gradient(180deg, rgba(15, 15, 20, 0.8) 0%, rgba(15, 15, 20, 0.65) 50%, rgba(15, 15, 20, 0.8) 100%);
     }
 
     .nav-links {
