@@ -694,6 +694,14 @@ footer {
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
+    body {
+        background-attachment: scroll;
+    }
+
+    body::before {
+        position: absolute;
+    }
+
     .nav-links {
         display: none;
     }
@@ -712,6 +720,15 @@ footer {
 
     .section-header h2 {
         font-size: 1.75rem;
+    }
+
+    .artists-grid {
+        gap: 0.75rem;
+    }
+
+    .artist-card {
+        padding: 0.625rem 1.25rem;
+        font-size: 0.8125rem;
     }
 }
 
